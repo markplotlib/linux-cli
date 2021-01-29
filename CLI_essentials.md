@@ -18,7 +18,7 @@ A: The shell is telling me how big my terminal is.
 These do slightly different things in the shell. If you're unsure which to use, go for single quotes.
 “curly quotes” will not work in the shell.
 
-#### `curl`
+## `curl`
 Transfers data. Most useful for downloading from the web.
 meaning: 'C + URL', i.e., "see URL" (originally a joke)
 
@@ -46,3 +46,16 @@ best practice: single-quotes around URL:
 `curl -o out_file.html -L 'http://google.com'`
 
 reason: special characters in the URL such as `&` could produce the wrong shell command.
+
+## view with `cat` and `less`
+
+`cat`: catenate
+
+`cat file1.txt file2.py`
+
+view *less* of the file at once: one screen-page at a time
+
+`less file1.txt`
+
+* `/` to search
+* `b` to go back
