@@ -1,3 +1,8 @@
+# The Shell
+
+> A command line interface for running programs on your computer.
+> The terminal program is the program that we use to interact with the shell.
+
 ```
 >>> echo hello!
 hello!
@@ -126,3 +131,45 @@ Directories in the `PATH` variable are separated by colons (`:`)
 `PATH=$PATH:/new/dir/here`
 
 **Note**: This change goes away once the shell is closed.
+
+# Shell Scripts
+
+These are files containing shell commands.
+
+## Customizing the shell itself
+
+This is the most important shell script to know.
+
+`bin` stands for binary. This directory sits in the home directory.
+
+### Shell configuration file
+
+This file can contain lines, like :
+
+```
+PATH=$PATH:/Users/markc/bin
+
+date
+echo "Hi, welcome to the shell"
+```
+
+For Windows or Mac, this file is named:
+`.bash_profile`
+
+For *Linux*, the above is only for log-in sessions.
+*Non-log-in shell sessions* run a file called `.bashrc`
+
+##### To work around this OS inconsistency in Linux:
+```
+if [-f ~/.bashrc ] ; then
+  source ~/.bashrc
+fi
+```
+
+## Controlling the Shell Prompt
+
+view the manual:
+(in Git Bash: viewable online only)
+`man bash` (all others)
+
+http://bashrcgenerator.com/
