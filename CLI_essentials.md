@@ -59,3 +59,38 @@ view *less* of the file at once: one screen-page at a time
 
 * `/` to search
 * `b` to go back
+
+`rmdir` works like `rm -r`, but only when directory is empty.
+
+`rm -i file.txt` to prompt user first
+
+### Quiz
+
+How can I delete the third and fourth file names?
+
+```
+Good File
+Bad Name Good File
+Bad File
+Good Name Bad Face
+```
+
+###### Answer
+
+`rm *'Bad F'*`
+
+## `grep` and `wc`
+
+`grep 'def' pytest/*` displays all lines containing `def` in directory `pytest`
+
+`grep 'def' pytest/* | less` pipes it to `less` (i.e., 1 screen at a time)
+
+Perform a word count using grep:
+
+`curl -L http://google.com | grep -c class`
+
+### `wc` for Word Count
+
+`curl -L http://google.com | grep class | wc -l`
+
+* `-l` is for counting lines
