@@ -94,3 +94,35 @@ Perform a word count using grep:
 `curl -L http://google.com | grep class | wc -l`
 
 * `-l` is for counting lines
+
+## Shell variables and Environment variables
+
+### Shell variables
+
+```
+numbers='one two three'
+echo $numbers
+```
+no spaces when assigning
+
+```
+echo $LINES x $COLUMNS
+```
+These are internal to the shell program itself.
+
+### Environment variables
+
+Environment variables are shared with programs that you run from within the shell.
+
+```
+echo $PATH
+```
+This tells your system where your program files are.
+
+Directories in the `PATH` variable are separated by colons (`:`)
+
+#### Adding a directory to the `PATH` environment variable
+
+`PATH=$PATH:/new/dir/here`
+
+**Note**: This change goes away once the shell is closed.
