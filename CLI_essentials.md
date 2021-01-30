@@ -1,3 +1,14 @@
+Bash LinkedIn Quiz Practice
+
+Q: What does this do?
+`cat >notes -`
+
+Q: What is the output here?
+```
+VAR="This old man came rolling"
+echo "${VAR//man/rolling}"
+```
+
 # The Shell
 
 > A command line interface for running programs on your computer.
@@ -132,12 +143,9 @@ Directories in the `PATH` variable are separated by colons (`:`)
 
 **Note**: This change goes away once the shell is closed.
 
-# Shell Scripts
-
-These are files containing shell commands.
-
 ## Customizing the shell itself
 
+**Shell Scripts** are files containing shell commands.
 This is the most important shell script to know.
 
 `bin` stands for binary. This directory sits in the home directory.
@@ -173,3 +181,13 @@ view the manual:
 `man bash` (all others)
 
 http://bashrcgenerator.com/
+
+## Alias
+
+`alias ll='ls -la'`
+
+This is an *unsaved* alias for this shell session.
+**Aliases can be saved in** `.bash_profile`
+
+To view aliases already stored:
+`alias`
