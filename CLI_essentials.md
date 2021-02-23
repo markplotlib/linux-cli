@@ -191,3 +191,11 @@ This is an *unsaved* alias for this shell session.
 
 To view aliases already stored:
 `alias`
+
+Extra basic commands
+```
+date
+expr 2 + 2
+uname
+hostname
+```
