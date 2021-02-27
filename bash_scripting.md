@@ -54,3 +54,35 @@ echo {Z..A}
 $ echo {01..10..3}
 01 04 07 10
 ```
+
+### parameter expansions
+
+```
+a="hi"
+echo ${a}
+```
+
+Note: you can type `echo $a`, but `echo ${a}` is more clear.
+
+```
+$ hi="abcdefg"
+$ echo $hi
+abcdefg
+$ echo ${hi:2}
+cdefg
+$ echo ${hi:2:3}
+cde
+```
+
+#### parameter substitutions
+```
+$ greeting="hello there!"
+$ echo ${greeting/there/everybody}
+hello everybody!
+
+$ eat="bananas"
+$ echo ${eat/a/o}
+bonanas
+$ echo ${eat//a/o}
+bononos
+```
