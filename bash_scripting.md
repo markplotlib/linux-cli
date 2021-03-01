@@ -86,3 +86,26 @@ bonanas
 $ echo ${eat//a/o}
 bononos
 ```
+
+### command substitutions
+`$(...)`
+often used with grep, cut and awk
+
+```
+$ uname -r
+3.1.7-340.x86_64
+$ echo "The kernel is $(uname -r)."
+The kernel is 3.1.7-340.x86_64
+$ echo "Result: $(python -c 'print("Hello from Python!")')"
+Hello from Python!
+```
+
+### arithmetic expansion
+`$((...))`
+
+```
+$ echo $((2+2))
+4
+$ echo $((4/5))
+0
+```
