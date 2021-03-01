@@ -109,3 +109,37 @@ $ echo $((2+2))
 $ echo $((4/5))
 0
 ```
+
+# Programming with Bash
+## Bash scripting syntax
+
+A script file will begin with a shebang line
+`#!/usr/bin/env bash`
+
+Bash scripts run inside of a noninteractive shell.
+This gives the script a clean environment to run in.
+
+### single vs double quotes
+Single quotes are *strong quotes* -- bash will not interpret text inside.
+
+Within double quotes, however, bash will interpret text inside.
+
+OK:
+`echo The kernel is $(uname -r).`
+
+Error:
+`echo The (kernel) is $(uname -r).`
+
+OK, BUT: just shows variable name -- literal
+`echo 'The (kernel) is $(uname -r).'`
+
+OK, AND: shows variable value
+`echo "The (kernel) is $(uname -r)."`
+
+## `echo`
+blank line: `echo`
+no new line: `echo -n`
+
+`declare -p` will show all variables that have been set in the current session (at the bottom), plus all environment variables (above it).
+
+`env` will show all environment variables
